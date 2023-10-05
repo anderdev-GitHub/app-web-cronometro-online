@@ -6,8 +6,29 @@
     <title>Cronômetro Online │ Flash</title>
     <link rel="shortcut icon" href="assets/favicon-anderdev-cinza-verde.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
-    
+    <main id="stopwatch">
+        <h2 id="timer">
+            00:00:00:000
+        </h2>
+
+        <div id="actions">
+            <button id="reset">
+                <i class="fa-solid fa-rotate-right" style="color: #ffc800;"></i>
+            </button>
+
+            <button id="power" action="start">
+                <i class="fa-solid fa-play" style="color: #ffc800;"></i>
+            </button>
+
+            <button id="mark">
+                <i class="fa-solid fa-flag" style="color: #ffc800;"></i>
+            </button>
+        </div>
+    </main>
+
+    <div id="marks-list"></div>
 
     <script src="script.js"></script>
 </body>
