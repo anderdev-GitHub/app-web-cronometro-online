@@ -21,8 +21,6 @@ const addMarkToList = (markIndex, markTime) => {
 const markTime = () => {
         marks.push(timer);
         addMarkToList(marks.length, timer);
-
-        showMessageForMark();
 }
 
 const toggleTimer = () => {
