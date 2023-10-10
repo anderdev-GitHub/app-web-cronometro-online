@@ -19,6 +19,10 @@ const addMarkToList = (markIndex, markTime) => {
 }
 
 const markTime = () => {
+    if (timer === 0) {
+        alert("Não é possível marcar o tempo com o cronômetro zerado. Inicie o cronômetro primeiro.");
+        return;
+    }
         marks.push(timer);
         addMarkToList(marks.length, timer);
 }
@@ -49,7 +53,7 @@ const resetTimer = () => {
     setTimer(timer);
     marksList.innerHTML = '';
     const button = document.getElementById('power');
-    button.getAttribute('action', 'start');
+    button.setAttribute('action', 'start');
     button.innerHTML = '<i class="fa-solid fa-play"></i>';
 }
 
