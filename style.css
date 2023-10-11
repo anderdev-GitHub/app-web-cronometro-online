@@ -83,14 +83,16 @@ body {
 #marks-list {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 7px;
-    padding: 5px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 11px;
+    margin-top: 20px;
+}
+
+#marks-list p{
     color: #48ff00;
-    font-size: 25px;
-    margin-top: 24px;
+    font-size: 20px;
+    padding: 5px;
 }
 
 #custom-alert {
