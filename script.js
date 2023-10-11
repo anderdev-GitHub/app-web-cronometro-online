@@ -1,5 +1,9 @@
 const timerEl = document.getElementById('timer');
 const marksList = document.getElementById('marks-list');
+const customAlert = document.getElementById('custom-alert');
+const alertMessage = document.getElementById('alert-message');
+const closeAlert = document.getElementById('close-alert');
+
 
 let intervalId = 0;
 let timer = 0;
@@ -18,11 +22,26 @@ const addMarkToList = (markIndex, markTime) => {
     marksList.innerHTML += `<p>Marca ${markIndex}: ${formatTime(markTime)}</p>`
 }
 
+const showCustomAlert = (message) => {
+    alertMessage.innerText = message;
+    customAlert.style.display = 'block';
+};
+
+closeAlert.addEventListener('click', () => {
+    customAlert.style.display = 'none';
+});
+
 const markTime = () => {
     if (timer === 0) {
-        alert("Não é possível marcar o tempo com o cronômetro zerado. Inicie o cronômetro primeiro.");
+        showCustomAlert("Não é possível marcar o tempo com o cronômetro zerado. Inicie o cronômetro primeiro.");
         return;
     }
+
+    if (marks.length >= 4) {
+        showCustomAlert("Limite máximo de 4 marcações alcançado.");
+        return;
+    }
+    
         marks.push(timer);
         addMarkToList(marks.length, timer);
 }

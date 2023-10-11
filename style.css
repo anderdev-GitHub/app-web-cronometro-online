@@ -92,3 +92,36 @@ body {
     font-size: 25px;
     margin-top: 24px;
 }
+
+#custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('assets/background-mark-alert-flash-reverso.gif') center/cover no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    color: #ffc800;
+    -webkit-text-stroke: 0.2px #ffffff;
+}
+
+#alert-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#close-alert {
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #ff0000;
+    color:#ffffff;
+    border-radius: 4px;
+}
+
+#alert-message {
+    width: 320px;
+}
